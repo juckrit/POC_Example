@@ -1,0 +1,26 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kingpowerclick.beauty",
+      "sha256_cert_fingerprints": [
+        "37:4A:84:18:AA:E2:C0:85:72:B4:70:4A:0D:1D:99:03:50:5C:EC:C6:CE:FD:88:57:8E:65:CA:0A:88:6F:C3:04"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kpc.his",
+      "sha256_cert_fingerprints": [
+        "F4:FE:56:0E:CB:A8:3B:74:CE:06:9B:4D:B5:AF:72:B9:8E:EE:84:7C:3C:69:A3:8D:6A:C6:FF:99:DC:6C:C1:A8"
+      ]
+    }
+  }
+]

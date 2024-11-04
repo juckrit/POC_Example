@@ -16,6 +16,18 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            setUrl("https://maven.lokalise.com")
+        }
+        maven {
+            setUrl("https://jitpack.io")
+        }
+        maven {
+            setUrl("https://sdk.smartlook.com/android/release")
+        }
+        maven {
+            setUrl("https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository")
+        }
     }
 }
 

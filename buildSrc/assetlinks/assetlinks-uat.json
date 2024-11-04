@@ -1,0 +1,28 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kingpowerclick.beauty.uat",
+      "sha256_cert_fingerprints": [
+        "37:4A:84:18:AA:E2:C0:85:72:B4:70:4A:0D:1D:99:03:50:5C:EC:C6:CE:FD:88:57:8E:65:CA:0A:88:6F:C3:04",
+        "F6:85:DB:33:B2:14:2F:6B:93:47:9A:ED:28:C3:9A:00:A7:4A:23:E3:52:8F:10:14:46:9B:46:D7:67:6A:FE:4F"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kpc.hisuat",
+      "sha256_cert_fingerprints": [
+        "F4:FE:56:0E:CB:A8:3B:74:CE:06:9B:4D:B5:AF:72:B9:8E:EE:84:7C:3C:69:A3:8D:6A:C6:FF:99:DC:6C:C1:A8",
+        "F6:85:DB:33:B2:14:2F:6B:93:47:9A:ED:28:C3:9A:00:A7:4A:23:E3:52:8F:10:14:46:9B:46:D7:67:6A:FE:4F"
+      ]
+    }
+  }
+]
