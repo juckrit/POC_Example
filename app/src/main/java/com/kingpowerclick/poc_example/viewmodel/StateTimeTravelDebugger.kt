@@ -1,6 +1,6 @@
 package com.kingpowerclick.poc_example.viewmodel
 
-import timber.log.Timber
+//import timber.log.Timber
 import kotlin.reflect.full.memberProperties
 
 // Class logs ViewState transitions to facilitate debugging.
@@ -46,12 +46,12 @@ class StateTimeTravelDebugger(
     }
 
     fun logAll() {
-        Timber.d(getMessage())
+//        Timber.d(getMessage())
     }
 
     fun logLast() {
         val states = listOf(stateTimeline.last())
-        Timber.d(getMessage(states))
+//        Timber.d(getMessage(states))
     }
 
     private fun getLogLine(

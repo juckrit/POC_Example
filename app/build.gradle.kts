@@ -104,7 +104,7 @@ dependencies {
     implementation(libs.squareup.moshi.moshiKotlinCodegen)
     implementation(libs.squareup.retrofit.adapterRxjava2)
     implementation(libs.jetbrains.kotlin.kotlinReflect)
-    implementation(libs.timber)
+//    implementation(libs.timber)
     implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.androidx.lifecycle.lifecycleViewmodelKtx)
     implementation(libs.androidx.navigation.navigationUi)
