@@ -197,4 +197,78 @@ dependencies {
     kapt(libs.androidx.lifecycle.common.java8)
     kapt(libs.jetbrains.kotlinx.kotlinxMetadataJvm)
 
+    loadTestDependencies(this)
+    loadAndroidTestDependencies(this)
+
+}
+
+fun loadTestDependencies(dependencyHandlerScope: DependencyHandlerScope) {
+    dependencyHandlerScope {
+        testImplementation(libs.byte.buddy.agent)
+        testImplementation(libs.byte.buddy.android)
+        testImplementation(libs.mockito.core)
+        testImplementation(libs.mockito.inline)
+        testImplementation(libs.mockk.agent)
+        testImplementation(libs.mockk.android) {
+            exclude("io.mockk", "mockk-agent-jvm")
+        }
+        testImplementation(libs.robolectric)
+        testImplementation(libs.junit)
+        testImplementation(libs.google.truth)
+        testImplementation(libs.jetbrains.kotlinx.kotlinxCoroutinesTest)
+        testImplementation(libs.androidx.test.rules)
+        testImplementation(libs.androidx.test.runner)
+        testImplementation(libs.androidx.test.espresso.espressoCore)
+        testImplementation(libs.androidx.test.ext.junit)
+        testImplementation(libs.androidx.arch.core.coreTesting)
+        testImplementation(libs.lokalise) {
+            isTransitive = true
+        }
+        testImplementation(libs.google.dagger.hiltAndroid) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+        testImplementation(libs.google.dagger.hiltAndroidTesting) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+        kaptTest(libs.google.dagger.hiltAndroidCompiler) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+    }
+}
+
+fun loadAndroidTestDependencies(dependencyHandlerScope: DependencyHandlerScope) {
+    dependencyHandlerScope {
+        androidTestImplementation(libs.byte.buddy.agent)
+        androidTestImplementation(libs.byte.buddy.android)
+        androidTestImplementation(libs.mockito.core)
+        androidTestImplementation(libs.mockito.inline)
+        androidTestImplementation(libs.mockk.agent) {
+            exclude("io.mockk", "mockk-agent-jvm")
+        }
+        androidTestImplementation(libs.compose.ui.test.junit)
+        androidTestImplementation(libs.compose.ui.test.manifest)
+        androidTestImplementation(libs.androidx.test.espresso.espressoCore)
+        androidTestImplementation(libs.androidx.test.ext.junit)
+        androidTestImplementation(libs.junit)
+        androidTestImplementation(libs.google.truth)
+        androidTestImplementation(libs.jetbrains.kotlinx.kotlinxCoroutinesTest)
+        androidTestImplementation(libs.androidx.arch.core.coreTesting)
+        androidTestImplementation(libs.androidx.test.rules)
+        androidTestImplementation(libs.androidx.test.runner)
+        androidTestImplementation(libs.lokalise) {
+            isTransitive = true
+        }
+        androidTestImplementation(libs.mockk.android) {
+            exclude("io.mockk", "mockk-agent-jvm")
+        }
+        androidTestImplementation(libs.google.dagger.hiltAndroid) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+        androidTestImplementation(libs.google.dagger.hiltAndroidTesting) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+        kaptAndroidTest(libs.google.dagger.hiltAndroidCompiler) {
+            exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-debug")
+        }
+    }
 }

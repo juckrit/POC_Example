@@ -1,6 +1,7 @@
 package com.kingpowerclick.poc_example.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.kingpowerclick.poc_example.BuildConfig
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlin.properties.Delegates
@@ -19,9 +20,9 @@ abstract class BaseViewModel<ViewState : BaseViewState, ViewEffect : BaseViewEff
     private var stateTimeTravelDebugger: StateTimeTravelDebugger? = null
 
     init {
-//        if (BuildConfig.DEBUG) {
-//            stateTimeTravelDebugger = StateTimeTravelDebugger(this::class.java.simpleName)
-//        }
+        if (BuildConfig.DEBUG) {
+            stateTimeTravelDebugger = StateTimeTravelDebugger(this::class.java.simpleName)
+        }
     }
 
     // Delegate will handle state event deduplication
